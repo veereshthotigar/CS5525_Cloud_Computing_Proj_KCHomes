@@ -1,0 +1,2 @@
+# CS5525_Cloud_Computing_Proj_KCHomes
+Academic project
