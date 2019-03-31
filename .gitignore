@@ -1,0 +1,6 @@
+
+src/server/node_modules/*
+src/loadToDB/node_modules/*
+src/server/config.js
+*.xml
+*.iml
