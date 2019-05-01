@@ -4,3 +4,5 @@ src/loadToDB/node_modules/*
 src/server/config.js
 *.xml
 *.iml
+*.xml
+src/server/.idea/workspace.xml
