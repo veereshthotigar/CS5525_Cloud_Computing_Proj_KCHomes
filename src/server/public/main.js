@@ -41,7 +41,7 @@ module.exports = ".bg-gradient {\r\n    /* Permalink - use to edit and share thi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-nav></app-nav>\n<div class=\"container bg-gradient text-white\">\n  <div class=\"row justify-content-md-center\" style=\"margin-top: 7.5%;\">\n    <div class=\"col col-lg-4 bg-gradient-dark\">\n      <app-register></app-register>\n    </div>\n    <div class=\"col col-lg-8\">\n      <app-home></app-home>\n    </div>\n  </div>\n</div>\n<app-footer></app-footer>"
+module.exports = "<app-nav></app-nav>\r\n<div class=\"container  text-white\">\r\n  <div class=\"row justify-content-md-center\" style=\"margin-top: 7.5%;\">\r\n    <!-- <div class=\"col col-lg-4 bg-gradient-dark\">\r\n      <app-register></app-register>\r\n    </div> -->\r\n    <div class=\"col-lg-12 \">\r\n      <app-home></app-home>\r\n    </div>\r\n  </div>\r\n</div>\r\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -208,7 +208,7 @@ module.exports = ".bg-footer {\r\n/* Permalink - use to edit and share this grad
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar fixed-bottom navbar-expand navbar-dark bg-footer\">\n    <div class=\"navbar-text m-auto\">\n      Made by Webcrackers\n    </div>\n  </nav>"
+module.exports = "<nav class=\"navbar fixed-bottom navbar-expand navbar-dark bg-footer\">\r\n    <div class=\"navbar-text m-auto\">\r\n      Made by Webcrackers\r\n    </div>\r\n  </nav>"
 
 /***/ }),
 
@@ -271,7 +271,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form class=\"form-inline p-5\" (ngSubmit)=\"onSearch()\" #heroForm=\"ngForm\" autocomplete=\"off\">\n    <label class=\"sr-only\" for=\"searchtext\">Search by</label>\n    <div class=\"input-group mb-2 mr-sm-2\">\n        <select class=\"form-control\"  id=\"search\"\n              required\n              [(ngModel)]=\"by\" name=\"by\">\n        <option *ngFor=\"let search of searchby\" [value]=\"search\">{{search}}</option>\n      </select>\n    </div>\n    \n    <!-- <input type=\"text\" class=\"form-control mb-2 mr-sm-2\" id=\"searchtext\" placeholder=\"Search by\"> -->\n  \n    <label class=\"sr-only\" for=\"searchtext\">searchtext</label>\n    <div class=\"input-group mb-2 mr-sm-2\">\n      <input type=\"text\" [(ngModel)]=\"text\" name=\"text\" class=\"form-control\" id=\"searchtext\" placeholder=\"Search Text\">\n    </div>\n   \n    <button type=\"submit\" class=\"btn btn-primary mb-2\">Search</button>\n  </form>\n  <table class=\"table table-striped\" *ngIf=\"result\">\n      <thead>\n        <tr>\n          <th scope=\"col\">ID</th>\n          <th scope=\"col\">Name</th>\n          <th scope=\"col\">Course</th>\n          <th scope=\"col\">Major</th>\n          <th scope=\"col\">Minor</th>\n          <th scope=\"col\">Created On</th>\n        </tr>\n      </thead>\n      <tbody >\n        <tr *ngFor=\"let student of result\">\n          <th scope=\"row\">{{student.class_id}}</th>\n          <td>{{student.student_name}}</td>\n          <td>{{student.course_of_study}}</td>\n          <td>{{student.major}}</td>\n          <td>{{student.minor}}</td>\n          <td>{{student.created_on | date:'short'}}</td>\n        </tr>\n      </tbody>\n    </table>"
+module.exports = "<form class=\"form-inline p-5\" (ngSubmit)=\"onSearch()\" #heroForm=\"ngForm\" autocomplete=\"off\">\r\n    <label class=\"sr-only\" for=\"searchtext\">Search by</label>\r\n    <div class=\"input-group mb-2 mr-sm-2\">\r\n        <select class=\"form-control\"  id=\"search\"\r\n              required\r\n              [(ngModel)]=\"by\" name=\"by\">\r\n        <option *ngFor=\"let search of searchby\" [value]=\"search\">{{search}}</option>\r\n      </select>\r\n    </div>\r\n    \r\n    <!-- <input type=\"text\" class=\"form-control mb-2 mr-sm-2\" id=\"searchtext\" placeholder=\"Search by\"> -->\r\n  \r\n    <label class=\"sr-only\" for=\"searchtext\">searchtext</label>\r\n    <div class=\"input-group mb-2 mr-sm-2\">\r\n      <input type=\"text\" [(ngModel)]=\"text\" name=\"text\" class=\"form-control\" id=\"searchtext\" placeholder=\"Search Text\">\r\n    </div>\r\n   \r\n    <button type=\"submit\" class=\"btn btn-primary mb-2\">Search</button>\r\n  </form>\r\n  <table class=\"table table-striped\" *ngIf=\"result\">\r\n      <thead>\r\n        <tr>\r\n          <th scope=\"col\">Address</th>\r\n          <th scope=\"col\">City</th>\r\n          <th scope=\"col\">State</th>\r\n          <th scope=\"col\">Rating</th>\r\n          <th scope=\"col\">Status</th>\r\n          <th scope=\"col\">Dated On</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody >\r\n        <tr *ngFor=\"let obj of result\">\r\n          <th scope=\"row\">{{obj.address}}</th>\r\n          <td>{{obj.city}}</td>\r\n          <td>{{obj.state}}</td>\r\n          <td>{{obj.structure_rating}}</td>\r\n          <td>{{obj.structure_status}}</td>\r\n          <td>{{obj.date_opened | date:'short'}}</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>"
 
 /***/ }),
 
@@ -301,11 +301,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var HomeComponent = /** @class */ (function () {
     function HomeComponent(http) {
         this.http = http;
-        this.searchby = ['major', 'minor'];
+        this.searchby = ['zip_code', 'neighborhood'];
     }
     HomeComponent.prototype.onSearch = function () {
         var _this = this;
-        this.url = '/student/search?searchby=' + this.by + '&searchtext=' + this.text;
+        this.url = 'http://52.15.61.252:80/search?searchby=' + this.by + '&searchtext=' + this.text;
         this.http.get(this.url)
             .subscribe(function (res) {
             _this.result = res.data;
@@ -347,7 +347,7 @@ module.exports = ".bg-header {\r\n/* Permalink - use to edit and share this grad
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand navbar-dark bg-header fixed-top\">\n  <a class=\"navbar-brand\" href=\"#\">Mean Stack</a>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-expand navbar-dark bg-header fixed-top\">\r\n  <a class=\"navbar-brand\" href=\"#\">KC Homes</a>\r\n</nav>"
 
 /***/ }),
 
@@ -410,7 +410,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form class=\"p-3\" (ngSubmit)=\"onCreate()\" #heroForm=\"ngForm\" autocomplete=\"off\">\n    <div class=\"form-group\">\n      <label for=\"ID\">Class Identity number</label>\n      <input type=\"number\" class=\"form-control\" [(ngModel)]=\"id\" name=\"id\"  placeholder=\"Enter Class ID\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"name\">Student name</label>\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"name\" name=\"name\" placeholder=\"Enter Name\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"course\">Course of study</label>\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"course\" name=\"course\" placeholder=\"Enter Course\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"major\">Major</label>\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"major\" name=\"major\" placeholder=\"Enter Major\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"minor\">Minor</label>\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"minor\" name=\"minor\" placeholder=\"Enter Minor\">\n    </div>      \n    <button type=\"submit\" class=\"btn btn-primary\">Create</button>\n  </form>\n"
+module.exports = "<form class=\"p-3\" (ngSubmit)=\"onCreate()\" #heroForm=\"ngForm\" autocomplete=\"off\">\r\n    <div class=\"form-group\">\r\n      <label for=\"ID\">Class Identity number</label>\r\n      <input type=\"number\" class=\"form-control\" [(ngModel)]=\"id\" name=\"id\"  placeholder=\"Enter Class ID\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"name\">Student name</label>\r\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"name\" name=\"name\" placeholder=\"Enter Name\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"course\">Course of study</label>\r\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"course\" name=\"course\" placeholder=\"Enter Course\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"major\">Major</label>\r\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"major\" name=\"major\" placeholder=\"Enter Major\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"minor\">Minor</label>\r\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"minor\" name=\"minor\" placeholder=\"Enter Minor\">\r\n    </div>      \r\n    <button type=\"submit\" class=\"btn btn-primary\">Create</button>\r\n  </form>\r\n"
 
 /***/ }),
 
@@ -443,7 +443,7 @@ var RegisterComponent = /** @class */ (function () {
     }
     RegisterComponent.prototype.onCreate = function () {
         var _this = this;
-        this.url = '/student/create';
+        this.url = 'http://127.0.0.1:3000/student/create';
         this.http.post(this.url, {
             class_id: this.id,
             name: this.name,
@@ -535,7 +535,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! E:\Repository\CS5551_team_1-2_ICP\ICP_9\client\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! E:\Repository\CS5525_Cloud_Computing_Proj_KCHomes\src\client\src\main.ts */"./src/main.ts");
 
 
 /***/ })

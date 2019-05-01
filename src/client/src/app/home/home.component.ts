@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   public by: string;
   public text : string;
   searchby = ['zip_code','neighborhood'];
+  //searchby = ['Demolition List','LeadSafe','Property Violations'];
   url:string;
   result:Observable<any>;
   dataSource: Object;
@@ -74,7 +75,7 @@ export class HomeComponent implements OnInit {
   }
 
   onSearch(){
-    this.url = 'http://127.0.0.1:3000/search?searchby='+this.by+'&searchtext='+this.text;
+    this.url = 'http://52.15.61.252:80/search?searchby='+this.by+'&searchtext='+this.text;
     this.http.get(this.url)
       .subscribe(
         (res:any)=>{
