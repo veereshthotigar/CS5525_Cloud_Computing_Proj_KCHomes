@@ -6,3 +6,4 @@ src/server/config.js
 *.iml
 *.xml
 src/server/.idea/workspace.xml
+src/server/.idea/workspace.xml

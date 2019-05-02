@@ -20,17 +20,14 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
-    "angular-fusioncharts": "^3.0.1",
     "bootstrap": "^4.3.1",
     "core-js": "^2.6.5",
-    "fusioncharts": "^3.13.4",
-    "fusionmaps": "^3.13.1-sr.1",
     "ngx-bootstrap": "^3.3.0",
     "rxjs": "^6.5.1",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.8.9",
+    "@angular-devkit/build-angular": "^0.13.8",
     "@angular/cli": "^6.2.9",
     "@angular/compiler-cli": "^6.1.0",
     "@angular/language-service": "^6.1.0",

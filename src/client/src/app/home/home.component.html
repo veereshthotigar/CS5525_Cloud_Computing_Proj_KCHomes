@@ -18,15 +18,6 @@
    
     <button type="submit" class="btn btn-primary mb-2">Search</button>
   </form>
-  <h1>
-    {{title}}
-  </h1>
-  <fusioncharts
-      width="800"
-      height="550"
-      type="world"
-      [dataSource]="dataSource">
-  </fusioncharts>
   <table class="table table-striped" *ngIf="result">
       <thead>
         <tr>
