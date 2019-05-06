@@ -19,6 +19,8 @@ export class AnalyticsComponent implements OnInit {
   url:string;
   result:Observable<any>;
   public chart:Chart;
+  lat: number = 51.678418;
+  lng: number = 7.809007;
   constructor(private http: HttpClient) { 
     this.chart = new Chart({
       chart: {
@@ -37,6 +39,8 @@ export class AnalyticsComponent implements OnInit {
         }
       ]
     });
+
+    
   }
 
   onSearch(){
