@@ -7,8 +7,11 @@ const db = require('mongoose'),
     cors = require('cors'),
     config = require('./config'),
     db_string = 'mongodb://'+config.db_user+':'+config.db_pswd+'@ds139645.mlab.com:39645/kchomes';
+
 //initializing schema
 require('./models/schema');
+require('./models/buy_sell');
+
 //connection for DB
 var db_promise = db.connect(db_string,{ useNewUrlParser: true });
 db_promise.then((data) => {

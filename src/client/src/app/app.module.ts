@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ChartModule, HIGHCHARTS_MODULES } from 'angular-highcharts';
+import * as more from 'highcharts/highcharts-more.src';
+import * as exporting from 'highcharts/modules/exporting.src';
 
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
@@ -43,6 +46,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    ChartModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
@@ -51,7 +55,9 @@ const appRoutes: Routes = [
     CommonModuleBootstrap,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    { provide: HIGHCHARTS_MODULES, useFactory: () => [ more, exporting ] }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
