@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  googleAPIkey:'AIzaSyA-KVaZb4AY8piVKrSyIJTmZcHIQHMEWNI',
   originApiUrl:"http://localhost:3000",//"http://52.15.61.252:80",
   thirdPartyUrl1:"",
   thirdPartyUrl2:"",

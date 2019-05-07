@@ -1,7 +1,16 @@
- <div [chart]="chart1"></div> 
-<!--<agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map>-->
-  <div [chart]="chart2"></div> 
-  <div [chart]="chart3"></div>
-  <div [chart]="chart4"></div>  
+
+  <!-- <div class="row">
+    <div class="col-sm-6"><div [chart]="chart1"></div></div>
+    <div class="col-sm-6"><div [chart]="chart2"></div></div>
+  </div>
+<br>
+  <div class="row">
+    <div class="col-sm-6"><div [chart]="chart3"></div></div>
+    <div class="col-sm-6"><div [chart]="chart4"></div></div>
+  </div> -->
+  <div class="row">
+    <div class="col-sm-6">
+        <google-chart [type]="'GeoChart'"  [data]="myData"></google-chart>
+    </div>
+    </div>
+  
