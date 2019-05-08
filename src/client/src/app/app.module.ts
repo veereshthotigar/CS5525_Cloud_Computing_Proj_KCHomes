@@ -27,9 +27,18 @@ import { SellComponent } from './sell/sell.component';
 import { RentComponent } from './rent/rent.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HousingComponent } from './housing/housing.component';
+import { MigrationComponent } from './migration/migration.component';
+import { RentalComponent } from './rental/rental.component';
+import { KansasComponent } from './kansas/kansas.component';
 
 const appRoutes: Routes = [
-  { path: 'analytics', component: AnalyticsComponent },
+  { path: 'analytics', component: AnalyticsComponent, children: [
+    { path: 'kansas', component: KansasComponent },
+    { path: 'migration', component: MigrationComponent },
+    { path: 'rental', component: RentalComponent },
+    { path: 'housing', component: HousingComponent }]
+  },
   { path: 'buy', component: BuyComponent },
   { path: 'sell', component: SellComponent },
   { path: 'rent', component: RentComponent },
@@ -47,7 +56,11 @@ const appRoutes: Routes = [
     BuyComponent,
     SellComponent,
     RentComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HousingComponent,
+    MigrationComponent,
+    RentalComponent,
+    KansasComponent
   ],
   imports: [
     BrowserModule,
