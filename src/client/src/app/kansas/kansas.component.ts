@@ -30,6 +30,7 @@ export class KansasComponent implements OnInit {
     displayMode: 'markers',
     colorAxis: {colors: ['green', 'blue']}
   }];
+  
   constructor() { }
 
   ngOnInit() {
