@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   googleAPIkey:'AIzaSyA-KVaZb4AY8piVKrSyIJTmZcHIQHMEWNI',
-  originApiUrl:"http://localhost:3000",//"http://52.15.61.252:80",
+  originApiUrl:'ec2-3-16-154-50.us-east-2.compute.amazonaws.com',//"http://localhost:3000",//"http://52.15.61.252:80",
   thirdPartyUrl1:"",
   thirdPartyUrl2:"",
   us_states:[
