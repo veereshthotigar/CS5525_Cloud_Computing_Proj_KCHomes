@@ -1,3 +1,9 @@
-<p>
-  rent works!
-</p>
+<div class="col-sm-12 justify-content-center text-center">
+  <div class="btn-group text-white btn-group-justified">
+    <a  class="btn btn-primary" routerLink="/rent/address" routerLinkActive="active">Find by Address</a>
+    <a  class="btn btn-primary" routerLink="/rent/zipcode" routerLinkActive="active">Find by Zip Code</a>
+  </div>
+</div>    
+<div class="tab-content " style="margin-top: 2.5%;">
+    <router-outlet #routerOutlet="outlet"></router-outlet>
+</div>

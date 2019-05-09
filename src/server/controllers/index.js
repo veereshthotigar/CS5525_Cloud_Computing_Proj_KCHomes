@@ -10,7 +10,7 @@ module.exports = function (app, db) {
         let query = {};
 
         query[search_by] = { $regex: search_text, $options: 'i' };
-        demolition.find(query).exec((err, res_data_) => {
+        demolition.find(query).exec((err, res_data) => {
             if (!err) {
                 res.send({
                     result: "Success",
@@ -32,7 +32,7 @@ module.exports = function (app, db) {
         let query = {};
 
         query[search_by] = { $regex: search_text, $options: 'i' };
-        buy_sell.find(query).exec((err, res_data_) => {
+        buy_sell.find(query).exec((err, res_data) => {
             if (!err) {
                 res.send({
                     result: "Success",

@@ -31,7 +31,15 @@ export class KansasComponent implements OnInit {
     colorAxis: {colors: ['green', 'blue']}
   }];
   
-  constructor() { }
+  
+  
+  
+  constructor() {
+    
+   
+    
+    
+  }
 
   ngOnInit() {
   }

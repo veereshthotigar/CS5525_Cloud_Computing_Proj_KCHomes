@@ -32,16 +32,29 @@ import { MigrationComponent } from './migration/migration.component';
 import { RentalComponent } from './rental/rental.component';
 import { KansasComponent } from './kansas/kansas.component';
 
+import { OneComponent } from './one/one.component';
+import { TwoComponent } from './two/two.component';
+import { ThreeComponent } from './three/three.component';
+import { AddressComponent } from './address/address.component';
+import { ZipcodeComponent } from './zipcode/zipcode.component';
+
 const appRoutes: Routes = [
   { path: 'analytics', component: AnalyticsComponent, children: [
-    { path: 'kansas', component: KansasComponent },
+    { path: 'kansas', component: KansasComponent,children: [
+      { path: 'one', component: OneComponent },
+      { path: 'two', component: TwoComponent },
+      { path: 'three', component: ThreeComponent }
+    ]},
     { path: 'migration', component: MigrationComponent },
     { path: 'rental', component: RentalComponent },
     { path: 'housing', component: HousingComponent }]
   },
   { path: 'buy', component: BuyComponent },
   { path: 'sell', component: SellComponent },
-  { path: 'rent', component: RentComponent },
+  { path: 'rent', component: RentComponent ,children: [
+    { path: 'address', component: AddressComponent },
+    { path: 'zipcode', component: ZipcodeComponent }
+  ]},
   { path: '**', component: PageNotFoundComponent },
 ];
 
@@ -60,7 +73,12 @@ const appRoutes: Routes = [
     HousingComponent,
     MigrationComponent,
     RentalComponent,
-    KansasComponent
+    KansasComponent,
+    OneComponent,
+    TwoComponent,
+    ThreeComponent,
+    AddressComponent,
+    ZipcodeComponent
   ],
   imports: [
     BrowserModule,
