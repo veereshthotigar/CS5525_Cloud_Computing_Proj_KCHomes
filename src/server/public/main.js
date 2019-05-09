@@ -2256,7 +2256,7 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     googleAPIkey: 'AIzaSyA-KVaZb4AY8piVKrSyIJTmZcHIQHMEWNI',
-    originApiUrl: 'ec2-3-16-154-50.us-east-2.compute.amazonaws.com',
+    originApiUrl: '',
     thirdPartyUrl1: "",
     thirdPartyUrl2: "",
     us_states: [
