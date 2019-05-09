@@ -2,7 +2,7 @@
 module.exports = function (app, db) {
     let demolition = db.model('demolition');
     let buy_sell = db.model('buy_sell');
-
+    let lead_safe = db.model('leadsafe');
     //api to search  details
     app.get('/search',(req,res)=>{
         let search_text = req.query.searchtext;
@@ -26,13 +26,13 @@ module.exports = function (app, db) {
         });
     });
 
-    app.get('/buy',(req,res)=>{
+    app.get('/lead_safe',(req,res)=>{
         let search_text = req.query.searchtext;
         let search_by = req.query.searchby;
         let query = {};
 
         query[search_by] = { $regex: search_text, $options: 'i' };
-        buy_sell.find(query).exec((err, res_data) => {
+        lead_safe.find(query).exec((err, res_data) => {
             if (!err) {
                 res.send({
                     result: "Success",

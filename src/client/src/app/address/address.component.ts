@@ -16,7 +16,7 @@ export class AddressComponent implements OnInit {
   result:Observable<any>;
   constructor(private http: HttpClient) { }
   onSearch(){
-    this.by = 'zip_code';
+    this.by = 'address';
     this.url = environment.originApiUrl+'/search?searchby='+this.by+'&searchtext='+this.text;
     this.http.get(this.url)
       .subscribe(

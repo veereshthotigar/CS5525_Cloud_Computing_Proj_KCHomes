@@ -13,7 +13,7 @@ import { ThreeComponent } from './three/three.component';
 import { BuyComponent } from './buy/buy.component';
 import { SellComponent } from './sell/sell.component';
 import { RentComponent } from './rent/rent.component';
-
+import { LeadComponent } from './lead/lead.component';
 import { AddressComponent } from './address/address.component';
 import { ZipcodeComponent } from './zipcode/zipcode.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -33,7 +33,8 @@ const appRoutes: Routes = [
   { path: 'sell', component: SellComponent },
   { path: 'rent', component: RentComponent ,children: [
     { path: 'address', component: AddressComponent },
-    { path: 'zipcode', component: ZipcodeComponent }
+    { path: 'zipcode', component: ZipcodeComponent },
+    { path: 'lead', component: LeadComponent }
   ]},
   { path: '',   redirectTo: '/analytics', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },

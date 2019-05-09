@@ -37,6 +37,7 @@ import { TwoComponent } from './two/two.component';
 import { ThreeComponent } from './three/three.component';
 import { AddressComponent } from './address/address.component';
 import { ZipcodeComponent } from './zipcode/zipcode.component';
+import { LeadComponent } from './lead/lead.component';
 
 const appRoutes: Routes = [
   { path: 'analytics', component: AnalyticsComponent, children: [
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
   { path: 'sell', component: SellComponent },
   { path: 'rent', component: RentComponent ,children: [
     { path: 'address', component: AddressComponent },
-    { path: 'zipcode', component: ZipcodeComponent }
+    { path: 'zipcode', component: ZipcodeComponent },
+    { path: 'lead', component: LeadComponent }
   ]},
   { path: '**', component: PageNotFoundComponent },
 ];
@@ -78,7 +80,8 @@ const appRoutes: Routes = [
     TwoComponent,
     ThreeComponent,
     AddressComponent,
-    ZipcodeComponent
+    ZipcodeComponent,
+    LeadComponent
   ],
   imports: [
     BrowserModule,
