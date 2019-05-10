@@ -15,7 +15,7 @@ export class RentalComponent implements OnInit {
   constructor() { 
     this.chart4= new Chart( {
       chart: {
-          type: 'column'
+          type: 'line'
       },
       title: {
           text: 'Rental Housing Units'

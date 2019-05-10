@@ -10,7 +10,7 @@ export class OneComponent implements OnInit {
   constructor() { 
     this.chart1= new Chart( {
       chart: {
-          type: 'column'
+          type: 'line'
       },
       title: {
           text: ' Occupied Housing Units without a Mortigage'

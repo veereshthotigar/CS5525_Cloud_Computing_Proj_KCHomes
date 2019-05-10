@@ -16,7 +16,7 @@ export class MigrationComponent implements OnInit {
   constructor() {
     this.chart2= new Chart( {
       chart: {
-          type: 'column'
+          type: 'line'
       },
       title: {
           text: 'Migration Flows'
@@ -78,7 +78,7 @@ export class MigrationComponent implements OnInit {
     });
     this.chart3= new Chart( {
         chart: {
-            type: 'column'
+            type: 'line'
         },
         title: {
             text: 'Movers from abroad'

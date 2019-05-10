@@ -10,7 +10,7 @@ export class TwoComponent implements OnInit {
   constructor() {
     this.chart2= new Chart( {
       chart: {
-          type: 'column'
+          type: 'line'
       },
       title: {
           text: ' Housing Units'

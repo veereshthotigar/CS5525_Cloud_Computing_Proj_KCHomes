@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4bcda64-9842-49e8-b372-09e2bc238342" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../client/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/polyfills.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/polyfills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/polyfills.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/polyfills.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/styles.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor.js.map" afterDir="false" />
-    </list>
+    <list default="true" id="f4bcda64-9842-49e8-b372-09e2bc238342" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -177,16 +163,15 @@
       <workItem from="1556933272514" duration="6451000" />
       <workItem from="1556999527874" duration="1210000" />
       <workItem from="1557190839047" duration="598000" />
-      <workItem from="1557413874254" duration="1837000" />
+      <workItem from="1557413874254" duration="2481000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33838000" />
+    <option name="totallyTimeSpent" value="34482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24917382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -194,7 +179,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41359773" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41359773" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
